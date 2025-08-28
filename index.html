@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ระบบ LineBot</title>
+  <!-- เพิ่ม CSS สำหรับจัดการสไตล์โดยรวมและโทนสีน้ำเงิน-ดำ-ม่วง -->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #1e1e2e; /* พื้นหลังโทนดำ-ม่วงเข้ม */
+      font-family: 'Arial', sans-serif;
+      color: #ffffff; /* สีตัวอักษรขาวเพื่อตัดกับพื้นหลัง */
+    }
+    .header {
+      background-color: #1e3a8a; /* โทนน้ำเงินเข้มสำหรับแถบหัวเว็บ */
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* เงาเล็กน้อยเพื่อความลึก */
+    }
+    .logo img {
+      height: 50px; /* ขนาดโลโก้ */
+    }
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #a5b4fc; /* สีม่วงอ่อนสำหรับชื่อเว็บ */
+    }
+    .iframe-container {
+      position: absolute;
+      top: 70px; /* ปรับตำแหน่ง iframe ให้อยู่ใต้ header */
+      left: 0;
+      width: 100%;
+      height: calc(100% - 70px); /* ปรับความสูงให้สัมพันธ์กับ header */
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- เพิ่มแถบหัวเว็บที่มีโลโก้และชื่อระบบ -->
+  <div class="header">
+    <div class="logo">
+      <!-- ใช้ placeholder สำหรับโลโก้ สามารถแทนที่ด้วย URL โลโก้จริง -->
+      <img src="https://via.placeholder.com/50x50.png?text=Logo" alt="LineBot Logo">
+    </div>
+    <div class="title">ระบบ LineBot</div>
+  </div>
+  <!-- ปรับ iframe ให้อยู่ใน container เพื่อควบคุมขนาดและตำแหน่ง -->
+  <div class="iframe-container">
+    <iframe src="https://script.google.com/macros/s/AKfycbzXrAzlrLW4IferLliK6EadHSaZvvoAp-LlRqjVglUvQ6x9be9Bg1IClseuDcK91dIV/exec" title="LINE Rich Menu" style="width: 100%; height: 100%; border: 0;"></iframe>
+  </div>
+</body>
+</html>
